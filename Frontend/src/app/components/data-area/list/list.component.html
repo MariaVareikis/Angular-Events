@@ -1,0 +1,34 @@
+
+<div>
+
+    <select (change)="displayEvents($event)">
+        <option selected disabled value="">Select Event Type</option>
+        <option *ngFor="let et of eventTypes" value={{et._id}}>{{et.eventType}}</option>
+    </select>
+
+    <table *ngIf="events?.length">
+        <thead>
+            <tr>
+                <th>Date & Time</th>
+                <th>Description</th>
+                <th>Address</th>
+                <th>Guests</th>
+                <th>Was?</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of events">
+                <td>{{e.eventDate | date:"dd/MM/yyyy HH:mm"}}</td>
+                <td>{{e.description}}</td>
+                <td>{{e.eventAddress}}</td>
+                <td>{{e.eventPeopleAmount}}</td>
+                <td>{{e.eventDate < today && time? "Yes": "No"}}</td>
+                <td>
+                    <button (click)="deleteMe(e._id)">❌</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

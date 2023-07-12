@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "903b63b4-ff7e-49db-9514-96b530986847",
+		"name": "Event Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23516167"
+	},
+	"item": [
+		{
+			"name": "Get all event types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/event-types",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"event-types"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all events by type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/events-by-type/63bd8cc645557f8ea0f5e298",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events-by-type",
+						"63bd8cc645557f8ea0f5e298"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eventTypeId\": \"63bd8cc645557f8ea0f5e298\",\r\n    \"eventDate\": \"2023-03-25 19:00:00\",\r\n    \"description\": \"Lior & Eden Wedding\",\r\n    \"eventAddress\": \"Beit Ronit Hadera\",\r\n    \"eventPeopleAmount\": 600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete event",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/api/events/63bd95298b5ca02d3d63ea8e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"events",
+						"63bd95298b5ca02d3d63ea8e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

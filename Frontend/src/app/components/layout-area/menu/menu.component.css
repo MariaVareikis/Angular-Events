@@ -1,0 +1,17 @@
+.cool {
+    color: rgb(228, 108, 237);
+    font-weight: bold;
+}
+
+a {
+    margin-top: -10px;
+    color: white;
+    font-size: x-large;
+    font-family: Segoe Print;
+    text-align: left;
+    margin-left: 10px;
+}
+
+a:hover {
+    color: rgb(129, 140, 248);
+}
